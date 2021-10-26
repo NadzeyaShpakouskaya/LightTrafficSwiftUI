@@ -25,10 +25,8 @@ struct ContentView: View {
             VStack{
                 lightSignsView
                 Spacer()
-                Button {
+                DefaultAppButtonView(text: buttonTitle) {
                     switchColors()
-                } label: {
-                    DefaultAppButtonView(text: buttonTitle)
                 }
             }.padding()
         }
@@ -36,9 +34,9 @@ struct ContentView: View {
     
     private var lightSignsView: some View {
         VStack(spacing: 16) {
-            CircleView(color: .red).opacity(redOpacity)
-            CircleView(color: .yellow).opacity(yellowOpacity)
-            CircleView(color: .green).opacity(greenOpacity)
+            CircleView(color: .red, opacity: redOpacity)
+            CircleView(color: .yellow, opacity:  yellowOpacity)
+            CircleView(color: .green, opacity: greenOpacity)
         }
     }
     

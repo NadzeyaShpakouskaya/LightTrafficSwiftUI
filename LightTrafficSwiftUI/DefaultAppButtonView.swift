@@ -9,26 +9,29 @@ import SwiftUI
 
 struct DefaultAppButtonView: View {
     let text: String
+    let action: () -> Void
     
     var body: some View {
-        ZStack{
-            Capsule()
-                .fill(.blue)
-                .frame(width: 200, height: 50)
-                .shadow(color: .white, radius: 5)
-                .overlay(
-                    Capsule().stroke(.white, lineWidth: 5)
-                )
-            Text(text)
-                .font(.title2)
-                .fontWeight(.medium)
-                .foregroundColor(.white)
+        Button(action: action){
+            ZStack{
+                Capsule()
+                    .fill(.indigo)
+                    .frame(width: 200, height: 50)
+                    .shadow(color: .white, radius: 5)
+                    .overlay(
+                        Capsule().stroke(.white, lineWidth: 5)
+                    )
+                Text(text)
+                    .font(.title2)
+                    .fontWeight(.medium)
+                    .foregroundColor(.white)
+            }
         }
     }
 }
 
 struct DefaultAppButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        DefaultAppButtonView(text: "Button")
+        DefaultAppButtonView(text: "Button", action: {})
     }
 }

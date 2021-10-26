@@ -17,6 +17,7 @@ struct CircleView: View {
             .overlay(
                 Circle()
                     .stroke(.white, lineWidth: 5)
+                   
             )
 
     }

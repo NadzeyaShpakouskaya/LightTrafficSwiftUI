@@ -15,6 +15,7 @@ struct DefaultAppButtonView: View {
             Capsule()
                 .fill(.blue)
                 .frame(width: 200, height: 50)
+                .shadow(color: .white, radius: 5)
                 .overlay(
                     Capsule().stroke(.white, lineWidth: 5)
                 )
@@ -22,7 +23,6 @@ struct DefaultAppButtonView: View {
                 .font(.title2)
                 .fontWeight(.medium)
                 .foregroundColor(.white)
-            
         }
     }
 }
